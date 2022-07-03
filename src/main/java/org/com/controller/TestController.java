@@ -112,7 +112,7 @@ public class TestController {
         // 设置响应头=======分支提交测试
         response.setContentType("application/vnd.ms-excel");
         response.setCharacterEncoding("utf-8");
-        // 设置防止中文名乱码
+        // 设置防止中文名乱码======分支提交2测试
         String filename = URLEncoder.encode("员工信息", "utf-8");
         // 文件下载方式(附件下载还是在当前浏览器打开)
         response.setHeader("Content-disposition", "attachment;filename=" + filename + ".xlsx");

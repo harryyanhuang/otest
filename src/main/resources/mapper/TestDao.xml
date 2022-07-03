@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="org.com.dao.TestDao">
+
+    <select id="search" resultType="int">
+         select count(1) from "user"
+    </select>
+
+    <update id="updateUser" parameterType="org.com.entity.User">
+        update "user" set "createtime"=#{createtime} where "username"=#{username}
+
+    </update>
+
+    <select id="userList" resultType="org.com.entity.User">
+        select * from "user"
+    </select>
+
+    <update id="updateUserPass" parameterType="org.com.entity.User">
+        update "user" set "password"=#{password} where "id"=#{id}
+    </update>
+</mapper>
+
+<!--              where "username"=#{username}-->
